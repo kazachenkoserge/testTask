@@ -1,0 +1,17 @@
+<template>
+    <template if:false={tripsLoaded}>
+        <div style="text-align: center;">
+            <p>
+                No trips for this Case exists
+            </p>
+        </div>
+    </template>
+    <template if:true={tripsLoaded}>
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                hide-checkbox-column>
+        </lightning-datatable>
+    </template>
+</template>
